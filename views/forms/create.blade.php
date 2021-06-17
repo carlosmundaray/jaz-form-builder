@@ -78,7 +78,7 @@
                                     @endif
                                 </div>
                             </div>
-                            <div class="col-md-4" style="display: none;" id="allows_edit_DIV">
+                            <div class="col-md-4" id="allows_edit_DIV">
                                 <div class="form-group">
                                     <label for="allows_edit" class="col-form-label">
                                         Allow Submission Edit

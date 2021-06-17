@@ -4,8 +4,8 @@
 <div class="header bg-gradient-primary pb-8 pt-5 pt-md-8"></div>
 <div class="container-fluid mt--7">
     <div class="row justify-content-center">
-        <div class="col-md-10">
-            <div class="col-md-12">
+        <div class="col-md-12">
+            <div class="card rounded-0">
                 <div class="card-header">
                     <h5 class="card-title">
                         {{ $pageTitle }} ({{ $submissions->count() }})
@@ -60,11 +60,6 @@
                             </tbody>
                         </table>
                     </div>
-                    @if($submissions->hasPages())
-                        <div class="card-footer mb-0 pb-0">
-                            <div>{{ $submissions->links() }}</div>
-                        </div>
-                    @endif
                 @else
                     <div class="card-body">
                         <h4 class="text-danger text-center">

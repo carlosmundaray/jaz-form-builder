@@ -76,11 +76,6 @@
                             </tbody>
                         </table>
                     </div>
-                    @if($forms->hasPages())
-                        <div class="card-footer mb-0 pb-0">
-                            <div>{{ $forms->links() }}</div>
-                        </div>
-                    @endif
                 @else
                     <div class="card-body">
                         <h4 class="text-danger text-center">

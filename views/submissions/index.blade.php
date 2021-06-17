@@ -15,6 +15,8 @@
                         </a>
                     </h5>
                 </div>
+            </div>
+   
 
                 @if($submissions->count())
                     <div class="table-responsive">
@@ -47,7 +49,9 @@
                                             <a href="{{ route('formbuilder::forms.submissions.show', [$form, $submission->id]) }}" class="btn btn-primary btn-sm" title="View submission">
                                                 <i class="fa fa-eye"></i> View
                                             </a> 
-
+                                            <a href="{{ route('formbuilder::my-submissions.edit', [$submission->id]) }}" class="btn btn-primary btn-sm" title="Edit submission">
+                                                    <i class="fa fa-pencil"></i> 
+                                            </a> 
                                             <form action="{{ route('formbuilder::forms.submissions.destroy', [$form, $submission]) }}" method="POST" id="deleteSubmissionForm_{{ $submission->id }}" class="d-inline-block">
                                                 @csrf 
                                                 @method('DELETE')
@@ -62,11 +66,6 @@
                             </tbody>
                         </table>
                     </div>
-                    @if($submissions->hasPages())
-                        <div class="card-footer mb-0 pb-0">
-                            <div>{{ $submissions->links() }}</div>
-                        </div>
-                    @endif
                 @else
                     <div class="card-body">
                         <h4 class="text-danger text-center">
@@ -77,5 +76,4 @@
             </div>
         </div>
     </div>
-</div>
 @endsection
